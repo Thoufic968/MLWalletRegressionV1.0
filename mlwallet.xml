@@ -26,7 +26,7 @@
 	<!-- <test name="MLWallet" parallel="methods" thread-count="2"> -->
 	 <test name="MLWallet"> 
 	     <parameter name="portno" value="4723"></parameter>
-         <parameter name="deviceName" value="4TWOGQCM6589MBZD"></parameter>
+         <parameter name="deviceName" value="RZ8T20EDQ5W"></parameter>
    		<classes>
     		<class name="com.mlwallet.regression.MLWalletRegressionScripts" >
 				<!--<methods>
