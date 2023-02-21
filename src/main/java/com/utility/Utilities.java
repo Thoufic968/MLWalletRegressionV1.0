@@ -312,7 +312,7 @@ public class Utilities extends ExtentReporter {
 
             return true;
         } else {
-            logger.error(validationtext + " is not displayed");
+            logger.info(validationtext + " is not displayed");
             ExtentReporter.extentLoggerFail("checkElementPresent", validationtext + " is not displayed");
             return false;
         }
@@ -460,10 +460,10 @@ public class Utilities extends ExtentReporter {
                 element.click();
             }
             logger.info("Clicked on " + validationtext);
-            ExtentReporter.extentLogger("click", "Clicked on " + validationtext);
+            ExtentReporter.extentLoggerPass("click", "Clicked on " + validationtext);
         } catch (Exception e) {
-            logger.info("Did not click on " + validationtext);
-            //ExtentReporter.screencapture();
+            logger.info("Not clicked on " + validationtext);
+            ExtentReporter.extentLoggerFail("click", "Not Clicked on " + validationtext);
         }
     }
 
@@ -692,7 +692,7 @@ public class Utilities extends ExtentReporter {
      * @param byLocator the by locator
      * @param text      the text
      */
-    public static void type(By byLocator, String input, String FieldName) {
+    public static void type(By byLocator, String input, String FieldName) throws Exception {
         try {
             String platform = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getSuite().getName();
             if (platform.equalsIgnoreCase("Android")) {
@@ -705,10 +705,10 @@ public class Utilities extends ExtentReporter {
             }
             input = input.split("\n")[0];
             logger.info("Typed the value " + input + " into " + FieldName);
-            ExtentReporter.extentLogger("", "Typed the value " + input + " into " + FieldName);
+            ExtentReporter.extentLoggerPass("", "Typed the value " + input + " into " + FieldName);
         } catch (Exception e) {
     		 logger.info("Not Typed the value " + input + " into " + FieldName);
-             ExtentReporter.extentLogger("", "Not Typed the value " + input + " into " + FieldName);
+             ExtentReporter.extentLoggerFail("", "Not Typed the value " + input + " into " + FieldName);
         }
     }
 
@@ -2550,7 +2550,7 @@ public class Utilities extends ExtentReporter {
                 WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), 20);
                 wait.until(ExpectedConditions.visibilityOfElementLocated(by));
             }
-            if (platform.equalsIgnoreCase("mpwa")) {
+            if (platform.equalsIgnoreCase("Android")) {
                 WebDriverWait wait = new WebDriverWait(DriverManager.getAppiumDriver(), 20);
                 wait.until(ExpectedConditions.visibilityOfElementLocated(by));
             }

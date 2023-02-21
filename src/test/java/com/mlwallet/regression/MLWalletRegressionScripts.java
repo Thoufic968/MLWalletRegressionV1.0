@@ -8,20 +8,23 @@ import com.business.mlwallet.MLWalletBusinessLogic;
 
 
 public class MLWalletRegressionScripts {
-//Hi
-	public  MLWalletBusinessLogic MLWalletBusinessLogic;
+
+	public static String deviceName;
+	public static String portno;
+	public  static MLWalletBusinessLogic MLWalletBusinessLogic;
 	
 	
 	//@BeforeSuite(groups = { "All" })
 	 @Parameters({"deviceName","portno"})
 	 @BeforeMethod
 	public void before(String deviceName,String portno) throws Exception {
-		 Utilities.relaunch = true;
+		MLWalletRegressionScripts.deviceName=deviceName;
+		MLWalletRegressionScripts.portno= portno;
 		 MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
 	 }
 
 
-//	@Test(priority = 0)
+	@Test(priority = 0)
 	public void mlWalletLoginScenario() throws Exception
 	{
 		MLWalletBusinessLogic.LogInScenarioWithValidMobNumber_Lgn_TC_01();
@@ -29,7 +32,7 @@ public class MLWalletRegressionScripts {
 		MLWalletBusinessLogic.LogInScenarioWithValidOTP();
 	}
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	public void mlWalletCashOutWithdraw() throws Exception
 	{
 		MLWalletBusinessLogic.cashOutWithdrawBank("100");
@@ -46,20 +49,20 @@ public class MLWalletRegressionScripts {
 	public void mlWalletSendMoneyToMLBranch() throws Exception
 	{
 		MLWalletBusinessLogic.sendMoneyToMLBranch("100");
-//		MLWalletBusinessLogic.sendMoneyRequiredDetails();
-//		MLWalletBusinessLogic.sendMoneyInvalidDetails();
-//		MLWalletBusinessLogic.sendMoneyAddRecipient();
-//		MLWalletBusinessLogic.sendMoneyContactDuplicate();
-//		MLWalletBusinessLogic.sendMoneyToSavedRecipient("100");
-//		MLWalletBusinessLogic.sendMoneyEditRecipient();
-//		MLWalletBusinessLogic.sendMoneyDeleteRecipient();
-//		MLWalletBusinessLogic.sendMoneyInvalidAmount("0");
-//		MLWalletBusinessLogic.sendMoneyInsufficientAmount("10000");
-//		MLWalletBusinessLogic.sendMoneyMaximumAmount("100000");
+		MLWalletBusinessLogic.sendMoneyAddRecipient();
+		MLWalletBusinessLogic.sendMoneyContactDuplicate();
+		MLWalletBusinessLogic.sendMoneyToSavedRecipient("100");
+		MLWalletBusinessLogic.sendMoneyEditRecipient();
+		MLWalletBusinessLogic.sendMoneyDeleteRecipient();
+		MLWalletBusinessLogic.sendMoneyInvalidAmount("0");
+		MLWalletBusinessLogic.sendMoneyInsufficientAmount("10000");
+		MLWalletBusinessLogic.sendMoneyMaximumAmount("100000");
+		MLWalletBusinessLogic.sendMoneyRequiredDetails();
+		MLWalletBusinessLogic.sendMoneyInvalidDetails();
 	}
 
 
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	public void mlWalletSendMoneyToWallet() throws Exception
 	{
 		MLWalletBusinessLogic.sendToMLWalletUser("10");
@@ -72,13 +75,13 @@ public class MLWalletRegressionScripts {
 		MLWalletBusinessLogic.sendMoneyDeleteFromFavorites();
 
 	}
-//	@Test(priority = 4)
+	@Test(priority = 4)
 	public void mlWalletTransactionHistory_Scenario() throws Exception
 	{
 		MLWalletBusinessLogic.mlWallet_TransactionHistory();
 	}
 
-//	@Test(priority = 5)
+	@Test(priority = 5)
 	public void mlWalletShopItems_Scenario() throws Exception
 	{
 		MLWalletBusinessLogic.mlWallet_ShopItems_without_Input_Otp();

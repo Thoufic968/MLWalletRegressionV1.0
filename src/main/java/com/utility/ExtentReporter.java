@@ -28,11 +28,13 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.business.mlwallet.MLWalletBusinessLogic;
 import com.deviceDetails.DeviceDetails;
 import com.driverInstance.DriverInstance;
 import com.driverInstance.DriverManager;
 import com.emailReport.SendEmail;
 import com.excel.ExcelUpdate;
+//import com.mlwallet.regression.MLWalletRegressionScripts;
 import com.propertyfilereader.PropertyFileReader;
 import com.utility.Json;
 import com.utility.LoggingUtils;
@@ -126,6 +128,7 @@ public class ExtentReporter implements ITestListener {
 		if (getPlatformFromtools().equals("Web")) {
 			src = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 		} else if (getPlatformFromtools().equals("Android") || getPlatformFromtools().equals("PWA") || getPlatformFromtools().equals("TV")) {
+			//src = ((TakesScreenshot) getDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 			src = ((TakesScreenshot) DriverManager.getAppiumDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 		} else if (getPlatformFromtools().equals("MPWA")) {
 			src = ((TakesScreenshot) getDriver()).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
@@ -133,6 +136,7 @@ public class ExtentReporter implements ITestListener {
 	}
 	
 	public synchronized ExtentReports ExtentReportGenerator(ITestContext context) {
+		
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = new Date();
 		currentDate = dateFormat.format(date).toString().replaceFirst(" ", "_").replaceAll("/", "_").replaceAll(":","_");
@@ -140,16 +144,19 @@ public class ExtentReporter implements ITestListener {
 		setPlatform(context.getSuite().getName());
 	//	userType = context.getCurrentXmlTest().getParameter("userType");
 		appVersion();
-		DeviceDetails.deviceDetails();
-		filePath = System.getProperty("user.dir") + "/Reports" + "/" + currentDate + "/" + getPlatform()+ "_"
+		//DeviceDetails.deviceDetails();
+		DeviceDetails.getTheDeviceManufacturer();
+		filePath = System.getProperty("user.dir") + "/Reports" + "/" + currentDate + "/" + getPlatform()+"_"
+		//+"/"
 			//	+ context.getCurrentXmlTest().getParameter("userType") + "/" + context.getName() + "/"
 			//	+ context.getCurrentXmlTest().getParameter("userType") +"_" 
 				+ context.getName() + "_" + getAppVersion()
 				+ "_" + getDate() + ".html";
 
-		fileName = context.getCurrentXmlTest().getParameter("userType") + "_" + context.getName() + "_"
+		fileName = //context.getCurrentXmlTest().getParameter("userType") + "_" + 
+				context.getName() + "_"
 				+ getAppVersion() + "_" + getDate() + ".html";
-		System.out.println("fileName"+fileName);
+		System.out.println("fileName "+fileName);
 		//to create html file
 		//ExtentSparkReporter reporter=new ExtentSparkReporter(System.getProperty("user.dir")+"\\Reports\\index.html");
 		htmlReport.set(new ExtentHtmlReporter(filePath));
@@ -166,7 +173,7 @@ public class ExtentReporter implements ITestListener {
 
 	@Override
 	public synchronized void onStart(ITestContext context) {			
-		System.out.println("ON START");
+		//System.out.println("ON START");
 		extent=ExtentReportGenerator(context);
 		ExcelUpdate.UserType = context.getCurrentXmlTest().getParameter("userType");
 		testContext=context;
@@ -182,8 +189,8 @@ public class ExtentReporter implements ITestListener {
 		handler=new PropertyFileReader("properties/ExecutionControl.properties");
 		String testName=result.getTestContext().getName();
 		if(handler.getproperty(testName).equals("Y")) {
-			logger.info("Running Test :: " + testName);
-			logger.info("Run Mode :: YES");
+//			logger.info("Running Test :: " + testName);
+//			logger.info("Run Mode :: YES");
 			DriverInstance.methodName = result.getName();
 			ExcelUpdate.ModuleName = result.getName();
 			logger.info(":::::::::Test " + result.getName() + " Started::::::::");
@@ -221,13 +228,26 @@ public class ExtentReporter implements ITestListener {
 
 	@Override
 	public synchronized void onTestFailure(ITestResult result) {
-		if ((getDriver() != null) || (DriverManager.getDriver() != null)) {
-			System.out.println("result.getName():"+result.getName());
+		try {
+		if ((getDriver() != null) || (DriverManager.getAppiumDriver() != null)) {
+			//System.out.println("result.getName():"+result.getName());
+			try {
+				screencapture();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			childTest.get().log(Status.FAIL, result.getName() + " is FAILED");
 			logger.info("::::::::::Test " + result.getName() + " FAILED::::::::::");
 			moduleFail.add(result.getName()+","+"Fail");
 			totalFailedTest++;
 		}
+
+	}finally {
+			logger.info("::::::::::Relaunching The App::::::::::");
+			Utilities.relaunch=true;
+		}
+
 	}
 
 	@Override
@@ -292,8 +312,8 @@ public class ExtentReporter implements ITestListener {
 			setScreenshotSource();
 			org.apache.commons.io.FileUtils.copyFile(src,
 					new File(System.getProperty("user.dir") + "/Reports" + "/" + currentDate + "/" + getPlatform() + "/"
-							+ Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest()
-									.getParameter("userType")
+//							+ Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest()
+//									.getParameter("userType")
 							+ "/" + getReport() + "/Screenshots/" + getReport() + "_" + getDate() + ".jpg"));
 			childTest.get().addScreenCaptureFromBase64String(base64Encode(src));
 			logger.log(src, "Attachment");
@@ -306,11 +326,9 @@ public class ExtentReporter implements ITestListener {
 		try {
 			src = ((TakesScreenshot) webdriver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
 			org.apache.commons.io.FileUtils.copyFile(src,
-					new File(System.getProperty("user.dir") + "/Reports" + "/" + currentDate + "/" + getPlatform()
-//							+ "/"
-//
-//							+ Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest()
-//									.getParameter("userType")
+					new File(System.getProperty("user.dir") + "/Reports" + "/" + currentDate + "/" + getPlatform() + "/"
+							+ Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest()
+									.getParameter("userType")
 							+ "/" + getReport() + "/Screenshots/" + getReport() + "_" + getDate() + ".jpg"));
 			childTest.get().addScreenCaptureFromBase64String(base64Encode(src));
 			logger.log(src, "Attachment");
@@ -339,7 +357,7 @@ public class ExtentReporter implements ITestListener {
 	public synchronized void appVersion() {
 		if (getPlatform().equals("Android") || getPlatform().equals("TV")) {
 			PropertyFileReader handler = new PropertyFileReader("properties/AppPackageActivity.properties");
-			setAppVersion("Build " + DeviceDetails.getAppVersion(handler.getproperty("zeePackage")).trim()
+			setAppVersion("Build " + DeviceDetails.getAppVersion(handler.getproperty("MLWalletPackage")).trim()
 					.replace("versionName=", ""));
 			logger.info(getAppVersion());
 		} else {

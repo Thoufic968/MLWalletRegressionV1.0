@@ -1,7 +1,7 @@
 package com.driverInstance;
 
-import org.openqa.selenium.WebElement;
 import com.utility.ExtentReporter;
+import org.openqa.selenium.WebElement;
 import com.propertyfilereader.PropertyFileReader;
 import com.utility.LoggingUtils;
 import io.appium.java_client.android.AndroidDriver;
