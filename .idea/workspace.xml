@@ -5,50 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f78265c-f23c-4389-b616-2c880263c940" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashInBank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_50_24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_52_13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_53_54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_55_31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_57_56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_58_33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android/MLWallet/Screenshots/MLWallet_2023_02_21_16_59_27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build 11.0.62_2023_02_21_16_48_29.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build 11.0.62_2023_02_21_16_48_56.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build _2023_02_21_16_45_41.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build _2023_02_21_16_46_06.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build _2023_02_21_16_47_23.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build _2023_02_21_17_33_17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/21_02_2023/Android_MLWallet_Build _2023_02_21_17_33_34.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/business/mlwallet/MLWalletBusinessLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/business/mlwallet/MLWalletBusinessLogic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/deviceDetails/DeviceDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/deviceDetails/DeviceDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/driverInstance/CommandBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/driverInstance/CommandBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/driverInstance/DriverInstance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/driverInstance/DriverInstance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/driverInstance/DriverManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/driverInstance/DriverManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/driverInstance/Drivertools.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/driverInstance/Drivertools.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/driverInstance/ExcelFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/driverInstance/ExcelFunctions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/driverInstance/SeleniumGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/driverInstance/SeleniumGrid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/emailReport/GmailInbox$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/emailReport/GmailInbox$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/emailReport/GmailInbox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/emailReport/GmailInbox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/emailReport/MailReport$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/emailReport/MailReport$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/emailReport/MailReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/emailReport/MailReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/emailReport/SendEmail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/emailReport/SendEmail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/emailReport/SendEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/emailReport/SendEmail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/excel/ExcelFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/excel/ExcelFunctions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/excel/ExcelUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/excel/ExcelUpdate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/global/GlobalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/GlobalData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/global/TestGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/global/TestGroup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metadata/ResponseInstance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/metadata/ResponseInstance.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletCashOutPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletCashOutPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletLogOutPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletLogOutPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletLoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletLoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletShopItemsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletShopItemsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletTransactionHistoryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/MLWalletTransactionHistoryPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/SendTransferPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mlwallet/pages/SendTransferPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/parameters/ParameterInjector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parameters/ParameterInjector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/propertyfilereader/PropertyFileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/propertyfilereader/PropertyFileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/ConfigurationGetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/ConfigurationGetter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/CustomSoftAssert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/CustomSoftAssert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/DataUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/DataUtility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/ExcelUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/ExcelUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletCashOutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/utility/ExtentReporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/ExtentReporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/Json.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/Json.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/JsonXRayTemplate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/JsonXRayTemplate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/LoggingUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/LoggingUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/MyTranformer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/MyTranformer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/RetryAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/RetryAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/utility/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/utility/Utilities.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/mlwallet/regression/MLWalletRegressionScripts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/mlwallet/regression/MLWalletRegressionScripts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mlwallet/regression/MLWalletRegressionScripts2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/mlwallet/regression/MLWalletRegressionScripts2.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

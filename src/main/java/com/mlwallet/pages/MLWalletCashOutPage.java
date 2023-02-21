@@ -17,7 +17,7 @@ public class MLWalletCashOutPage {
 
     public static By objContinueBtn = By.xpath("//*[@text='Continue']");
 
-    public static By objLocationPermission = By.xpath("//*[@text='WHILE USING THE APP']");
+    public static By objLocationPermission = By.xpath("//*[@text='WHILE USING THE APP' or @text='While using the app']");
 
     public static By objBackToHomeBtn = By.xpath("//*[@text='Back To Home']");
 
